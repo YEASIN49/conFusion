@@ -3,22 +3,26 @@
   padding: 0 auto;
 }
 .row-content {
-  min-height: 350px;
+  min-height: 400px;
   border-bottom: 1px ridge;
   margin: 0 auto;
+  padding: 50px 0;
 }
 footer {
-  background-color: rgb(98, 236, 156);
-  padding: 30px 0;
-  margin: 0;
+  background-color: #d1c4e9; /* rgb(98, 236, 156); */
+  padding: 20px 0;
+  margin: 0 auto;
 }
 .jumbotron {
-  margin: 0;
-  padding: 5rem 2rem; /*by default 4rem 2rem*/
-  background-color: rgb(72, 235, 139);
-  color: rgb(36, 56, 42);
+  margin: 0 auto;
+  padding: 70px 30px; /* 5rem 2rem; */ /*by default 4rem 2rem*/
+  background-color: #9575cd; /* rgb(72, 235, 139); */
+  color: floralwhite; /* rgb(36, 56, 42); */
 }
 address {
   font-size: 0.9rem;
   color: #0f0f0f;
+}
+.test {
+  background-color: red;
 }
