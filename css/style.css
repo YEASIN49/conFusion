@@ -1,3 +1,7 @@
+.body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
 .row-header {
   margin: 0 auto;
   padding: 0 auto;
@@ -26,3 +30,11 @@ address {
 .test {
   background-color: red;
 }
+
+.navbar-dark {
+  background-color: #512da8; /* salmon; */
+}
+/* 
+.breadcrumb {
+  background-color: rgb(162, 142, 179);
+} */
