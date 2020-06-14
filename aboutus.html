@@ -23,10 +23,12 @@
   />
 
     <!--============ Fonts + Icon ==================-->
-    <link
+    <!-- <link 
       rel="stylesheet"
       href="node_modules/font-awesome/css/font-awesome.min.css"
-    />
+    /> -->
+    <!-- fas fa-* icons dont works on above link -->
+    <script src="https://kit.fontawesome.com/160321d6f6.js"></script>
 
     <!--============ Bootstrap Social ==================-->
     <link
@@ -175,7 +177,7 @@
 
       <div class="row row-content align-items-center">
         <div class="col-12">
-          <h2>Corporate Leadership</h2>
+          <h2>Corporate Leadership <span class="badge bg-danger">TABS</span></h2>
           
           <ul class="nav nav-tabs">
             
@@ -264,6 +266,129 @@
             </div> 
           </div>  
         </div>
+ <!----**************************************
+                 Tab Ends Here 
+  ****************************************-->
+  <!-- *****************************************************
+              id of card-header div is no of use
+******************************************************* -->
+        <div class="col-12 mt-5">
+          <h2>Corporate Leadership <span class="badge badge-pill bg-danger">Accordion</span></h2>
+          
+          
+ 
+          <div id="accordion"> 
+            <div class="card">
+              <div class="card-header" role="tab" id="peter-head">
+                <h3 class="mb-0">
+                  <a href="" class="d-flex justify-content-between" data-toggle="collapse" data-target="#peter-accordion">
+                    <span>Peter Pan <small>Chief Epicurious Officer</small></span>
+                    <span class="fas fa-chevron-down" ></span>
+                  </a> 
+                  
+                </h3>
+              </div>
+              <div role="tabpanel" aria-labelledby="peter-tab" id="peter-accordion" class="collapse show" data-parent="#accordion">
+                <div class="card-body">
+                  <p class="d-none d-sm-block">
+                    Our CEO, Peter, credits his hardworking East Asian immigrant parents
+                    who undertook the arduous journey to the shores of America with the
+                    intention of giving their children the best future. His mother's
+                    wizardy in the kitchen whipping up the tastiest dishes with whatever
+                    is available inexpensively at the supermarket, was his first
+                    inspiration to create the fusion cuisines for which
+                    <em>The Frying Pan</em> became well known. He brings his zeal for
+                    fusion cuisines to this restaurant, pioneering cross-cultural
+                    culinary connections.
+                  </p>
+                </div>
+               
+              </div>
+
+            </div>
+
+            <div class="card">
+              <div id="danny-head" class="card-header" role="tab">
+                <h3 class="mb-0">
+                  <a href="" class="d-flex justify-content-between" data-target="#danny-accordion" data-toggle="collapse">
+                    <span>
+                      Dhanasekaran Witherspoon <small>Chief Food Officer</small>
+                    </span> 
+                    <span class="fas fa-chevron-down" ></span>
+                  </a>
+                </h3>
+              </div>  
+
+              <div role="tabpanel" aria-labelledby="danny-tab" id="danny-accordion" class="collapse" data-parent="#accordion">
+
+                <div class="card-body">
+                  <p class="d-none d-sm-block">
+                    Our CFO, Danny, as he is affectionately referred to by his
+                    colleagues, comes from a long established family tradition in
+                    farming and produce. His experiences growing up on a farm in the
+                    Australian outback gave him great appreciation for varieties of food
+                    sources. As he puts it in his own words,
+                    <em
+                      >Everything that runs, wins, and everything that stays, pays!</em
+                    >
+                  </p>
+                </div> 
+              </div>
+            </div>
+           
+            <div class="card">
+              <div id="agumbe-head" class="card-header" role="tab">
+                <h3>
+                  <a href="" class="d-flex justify-content-between" data-target="#agumbe-accordion" data-toggle="collapse">
+                    <span>
+                      Agumbe Tang <small>Chief Taste Officer</small>
+                    </span> 
+                    <span class="fas fa-chevron-down"></span>
+                  </a> 
+                </h3>
+              </div>
+
+              <div role="tabpael" aria-labelledby="agumbe-tab" id="agumbe-accordion" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                  <p class="d-none d-sm-block">
+                    Blessed with the most discerning gustatory sense, Agumbe, our CTO,
+                    personally ensures that every dish that we serve meets his exacting
+                    tastes. Our chefs dread the tongue lashing that ensues if their dish
+                    does not meet his exacting standards. He lives by his motto,
+                    <em>You click only if you survive my lick.</em>
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+              <div class="card">
+                <div id="alberto-head" class="card-header" role="tab">
+                  <h3>
+                    <a href="" class="d-flex justify-content-between" data-target="#alberto-accordion" data-toggle="collapse">
+                      <span>
+                        Alberto Somayya <small>Executive Chef</small>
+                      </span> 
+                      <span class="fas fa-chevron-down"></span>
+                    </a>
+                  </h3>
+                </div>
+
+                <div role="tabpael" aria-labelledby="alberto-tab" id="alberto-accordion" class="collapse" data-parent="#accordion">
+                  <div class="card-body">
+                    <p class="d-none d-sm-block">
+                      Award winning three-star Michelin chef with wide International
+                      experience having worked closely with whos-who in the culinary
+                      world, he specializes in creating mouthwatering Indo-Italian fusion
+                      experiences. He says,
+                      <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em>
+                    </p>
+                  </div>
+                </div>
+              </div>
+  
+          </div>  
+        </div>
+
       </div>
       <div class="row row-content">
         <div class="col-12 col-sm-9">
