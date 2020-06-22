@@ -10,15 +10,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!--============ Bootstrap CSS ==================-->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
-    />
+    /> -->
+
+    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  
+
+    <!-- <link rel="stylesheet" href="css/force-prefer-media.css"> -->
+
     <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
 
-    <!--============ Fonts + Icon ==================-->
+      <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+     
+      <!-- <link rel="stylesheet" href="css/force-prefer-media.css"> -->
+    
+      <!-- <link rel="stylesheet" href="css/force-prefer-media.css" media="(prefers-reduced-motion: no-preference)">  -->
+        <!-- above approach recommended by google ! Only browsers that support will download this -->
+        <!-- preference-reduce-motion can be enable from windows 10 > setting > ease of use > display > show animation [if show animation checked no need to include abobe preference-reduce-motion stylesheet] -->
+    
+      <!--============ Fonts + Icon ==================-->
     <link
       rel="stylesheet"
       href="node_modules/font-awesome/css/font-awesome.min.css"
@@ -71,9 +87,56 @@
               >
             </li>
           </ul>
+          <span class="navbar-text">
+            <a data-toggle="modal" data-target="#login-modal">
+              <span class="fa fa-sign-in"></span> Login
+            </a>
+          </span>
         </div>
       </div>
     </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="login-modal" role="dialog" aria-labelledby="login-modal-form" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-row">
+                <div class="form-group col-sm-4">
+                  <label  for="email-input"> Enter Email </label>
+                  <input type="email" class="form-control">
+                </div>
+                <div class="form-group col-sm-4">
+                  <label for="password-input">Password</label>
+                  <input type="password" class="form-control">
+                </div>
+                <div class="col-sm-auto">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="save-password">
+                    <label class="form-check-label" for="input-check">Remember Password</label>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="modal-footer"> -->
+                <div class="form-row">
+                  <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                </div>
+              <!-- </div> -->
+              
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
     <header class="jumbotron">
       <div class="container">
@@ -94,7 +157,14 @@
             />
           </div>
           <div class="col-12 col-sm-3 align-self-center">
-            <a href="#reserve-section" class="btn btn-warning btn-sm btn-block">Reserve Table</a>
+            <a
+              data-toggle="tooltip"
+              data-html="true"
+              title="or <br><strong> call : +999999999 </strong>"
+              data-placement="bottom" 
+              href="#reserve-section" 
+              class="btn btn-warning btn-sm btn-block"
+                >Reserve Table</a>
           </div>
         </div>
       </div>
@@ -103,7 +173,7 @@
     <div class="container">
       <div class="row row-content">
         <div class="col">
-          <div id="hero-carousel" class="carousel slide" data-ride="carousel">
+          <div id="hero-carousel" class="carousel  carousel-fade" data-interval="2000"  data-pause="false" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
                 <img class="d-block img-fluid" src="img/uthappizza.png" alt="">
@@ -156,6 +226,56 @@
           </div>
         </div>
       </div>
+
+
+      <!-- <div class="row row-content">
+        <div class="col">
+          <div id="carousel-fade" class="carousel carousel-fade" data-ride="carousel" data-interval="2000">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-fade" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-fade" data-slide-to="1"></li>
+                <li data-target="#carousel-fade" data-slide-to="2"></li>
+            </ol>
+        
+            <div class="carousel-inner embed-responsive embed-responsive-16by9" role="listbox">
+              <div class="carousel-item embed-responsive-item active">
+                <img src="img/alberto.png" alt="First slide image" class="img-fluid">
+                <div class="carousel-caption">
+                  <h3>First slide Heading</h3>
+                  <p>First slide Caption</p>
+                </div>
+              </div>
+        
+              <div class="carousel-item embed-responsive-item">
+                <img src="img/buffet.png" alt="Second slide image" class="img-fluid">
+                <div class="carousel-caption">
+                  <h3>Second slide Heading</h3>
+                  <p>Second slide Caption</p>
+                </div>
+              </div>
+        
+              <div class="carousel-item embed-responsive-item">
+                <img src="img/uthappizza.png" alt="Third slide image" class="img-fluid">
+                <div class="carousel-caption">
+                  <h3>Third slide Heading</h3>
+                  <p>Third slide Caption</p>
+                </div>
+              </div>
+            </div>
+        
+            <a class="carousel-control-prev" href="#carousel-fade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-fade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        </div>
+      </div> -->
+
+
       <div class="row row-content align-items-center">
         <div class="col-12 col-sm-4 order-sm-last col-md-3">
           <h3>Our Lipsmacking Culinary Creations</h3>
@@ -350,8 +470,20 @@
         </div>
       </div>
     </footer>
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+
+    <!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>
