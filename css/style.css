@@ -86,6 +86,12 @@ address {
 .carousel.carousel-fade .carousel-item.active {
   opacity: 1 !important;
 }
+#carousel-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
 /*////////////////////*/
 /* 
 .carousel-fade .carousel-item {
