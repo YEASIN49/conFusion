@@ -1,0 +1,86 @@
+$lt-gray: #ddd;
+$background-dark: #512da8;
+$background-light: #9575cd;
+$background-pale: #d1c4e9;
+
+$carousel-item-height: 300px;
+
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+  margin: 0px auto;
+  padding: $pad-up-dn $pad-left-right;
+}
+
+body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+
+.row-header {
+  @include zero-margin(0px, auto);
+}
+.row-content {
+  @include zero-margin(50px, 0px);
+
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+.footer {
+  background-color: $background-pale;
+  @include zero-margin(20px, 0px);
+}
+.jumbotron {
+  @include zero-margin(90px, 30px);
+  background-color: $background-light;
+  color: floralwhite;
+  margin: 40px auto auto auto;
+}
+.address {
+  font-size: 0.9rem;
+  color: #0f0f0f;
+}
+.navbar-dark {
+  background-color: $background-dark;
+}
+
+.tab-content {
+  border-bottom: 1ps solid $lt-gray;
+  border-left: 1ps solid $lt-gray;
+  border-right: 1ps solid $lt-gray;
+  padding: 10px;
+}
+
+.carousel {
+  background-color: $background-dark;
+  .carousel-item {
+    height: $carousel-item-height;
+    display: block;
+    opacity: 0;
+    transition: opacity ease-out 0.7s;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: $carousel-item-height;
+    }
+  }
+  .carousel-item.active {
+    opacity: 1;
+  }
+}
+#carousel-btn-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+
+.modal-header {
+  color: floralwhite;
+  background-color: $background-dark;
+  button {
+    color: floralwhite;
+  }
+}
+.modal-body {
+  background-color: $background-pale;
+}

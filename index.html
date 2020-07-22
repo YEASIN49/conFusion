@@ -10,23 +10,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!--============ Bootstrap CSS ==================-->
-    <!-- <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    /> -->
+   
 
     
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
   
 
     <!-- <link rel="stylesheet" href="css/force-prefer-media.css"> -->
 
     <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
 
-      <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
      
       <!-- <link rel="stylesheet" href="css/force-prefer-media.css"> -->
     
@@ -47,7 +42,8 @@
     />
 
     <!--========== Custom CSS ==============-->
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/myStyle.css" /> -->
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>Ristorante Con Fusion</title>
   </head>
@@ -88,7 +84,7 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#login-modal">
+            <a id="login-modal-toggler">
               <span class="fa fa-sign-in"></span> Login
             </a>
           </span>
@@ -110,12 +106,12 @@
             <form action="">
               <div class="form-row">
                 <div class="form-group col-sm-4">
-                  <label  for="email-input"> Enter Email </label>
-                  <input type="email" class="form-control">
+                  <!-- <label  for="email-input"> Enter Email </label> -->
+                  <input type="email" class="form-control" placeholder="Enter email">
                 </div>
                 <div class="form-group col-sm-4">
-                  <label for="password-input">Password</label>
-                  <input type="password" class="form-control">
+                  <!-- <label for="password-input">Password</label> -->
+                  <input type="password" class="form-control" placeholder="password">
                 </div>
                 <div class="col-sm-auto align-self-center">
                   <div class="form-check">
@@ -165,7 +161,7 @@
               href="#reserve-section" 
               class="btn btn-warning btn-sm btn-block"
                 >Reserve Table</a> -->
-                <a class="btn btn-warning text-dark btn-sm btn-block" data-toggle="modal" data-target="#reserve-form">Reserve Table</a>
+                <a class="btn btn-warning text-dark btn-sm btn-block" id="reserve-table-toggler" >Reserve Table</a>
           </div>
         </div>
       </div>
@@ -317,13 +313,9 @@
             <a href="#hero-carousel" role="button" data-slide="next" class="carousel-control-next">
               <span class="carousel-control-next-icon"></span>
             </a>
-            <div class="btn-group" id="carousel-button">
-              <button class="btn btn-danger btn-sm" id="carousel-pause">
+            <div class="btn-group" id="carousel-btn-container">
+              <button class="btn btn-danger btn-sm" id="carousel-btn">
                 <span class="fa fa-pause"></span>
-              </button>
-
-              <button class="btn btn-danger btn-sm" id="carousel-play">
-                <span class="fa fa-play"></span>
               </button>
 
             </div>
@@ -576,29 +568,55 @@
     </footer>
 
     <!-- JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
-<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <!-- <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<!-- <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
+     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- <script>
       $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
       });
     </script> -->
-    <script>
+    
+    <!-- Carousel Paly & Pause Button -->
+
+    <script> 
       $(document).ready(function(){
         $("#hero-carousel").carousel({interval: 2000, pause: "false"});
-        $("#carousel-pause").click(function(){
-          $("#hero-carousel").carousel("pause");
+        $("#carousel-btn").click(function(){
+          if ($("#carousel-btn").children("span").hasClass('fa-pause')) {
+                    $("#hero-carousel").carousel('pause');
+                    $("#carousel-btn").children("span").removeClass('fa-pause');
+                    $("#carousel-btn").children("span").addClass('fa-play');
+                }
+                else if ($("#carousel-btn").children("span").hasClass('fa-play')){
+                    $("#hero-carousel").carousel('cycle');
+                    $("#carousel-btn").children("span").removeClass('fa-play');
+                    $("#carousel-btn").children("span").addClass('fa-pause');                    
+                }
         });
-        $("#carousel-play").click(function(){
-          $("#hero-carousel").carousel("cycle");
+
+         //login modal toggler
+    // instead of using data-toggle="modal" data-target="#login-modal" as html attribute
+        $("#login-modal-toggler").click(function(){
+          $("#login-modal").modal("toggle");
         });
+
+        // Reserve table Modal toggler
+        // instead of using data-toggle="modal" data-target="#reserve-form" as attribute
+           
+        $("#reserve-table-toggler").click(function(){
+          $("#reserve-form").modal("toggle");
+        });
+        
       })
+
+     
+
     </script>
   </body>
 </html>

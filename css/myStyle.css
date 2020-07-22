@@ -1,4 +1,4 @@
-.body {
+body {
   padding: 50px 0px 0px 0px;
   z-index: 0;
 }
@@ -86,7 +86,7 @@ address {
 .carousel.carousel-fade .carousel-item.active {
   opacity: 1 !important;
 }
-#carousel-button {
+#carousel-btn-container {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -125,3 +125,15 @@ address {
 .carousel-item:nth-child(3) {
   background-color: yellow;
 } */
+
+.modal-header {
+  color: floralwhite;
+  background-color: #512da8;
+}
+.modal-header button {
+  color: floralwhite;
+}
+
+.modal-body {
+  background-color: #d1c4e9;
+}
