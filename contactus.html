@@ -10,62 +10,134 @@
     />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="node_modules/font-awesome/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="node_modules/bootstrap-social/bootstrap-social.css"
-    />
-    <link href="css/style.css" rel="stylesheet" />
+     <!--============ Bootstrap CSS ==================-->
+   
+
+     <link
+     rel="stylesheet"
+     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+     crossorigin="anonymous"
+   />
+     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
+   
+ 
+     <!-- <link rel="stylesheet" href="css/force-prefer-media.css"> -->
+ 
+     <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+ 
+       <link rel="stylesheet" href="css/bootstrap.min.css">
+      
+       <!-- <link rel="stylesheet" href="css/force-prefer-media.css"> -->
+     
+       <!-- <link rel="stylesheet" href="css/force-prefer-media.css" media="(prefers-reduced-motion: no-preference)">  -->
+         <!-- above approach recommended by google ! Only browsers that support will download this -->
+         <!-- preference-reduce-motion can be enable from windows 10 > setting > ease of use > display > show animation [if show animation checked no need to include abobe preference-reduce-motion stylesheet] -->
+     
+       <!--============ Fonts + Icon ==================-->
+     <link
+       rel="stylesheet"
+       href="node_modules/font-awesome/css/font-awesome.min.css"
+     />
+     <script src="https://kit.fontawesome.com/160321d6f6.js"></script>
+ 
+     <!--============ Bootstrap Social ==================-->
+     <link
+       rel="stylesheet"
+       href="node_modules/bootstrap-social/bootstrap-social.css"
+     />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+ 
+     <!--========== Custom CSS ==============-->
+     <!-- <link rel="stylesheet" href="css/myStyle.css" /> -->
+     <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
       <div class="container">
         <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#Navbar"
+          data-target="#collapsableNav"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#"
-          ><img src="img/logo.png" width="41" height="30" alt=""
-        /></a>
-        <div class="collapse navbar-collapse" id="Navbar">
+        <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41" alt=""></a>
+        <div class="collapse navbar-collapse" id="collapsableNav">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html"
-                ><span class="fa fa-home fa-lg"></span> Home</a
-              >
+            <li class="nav-item ">
+              <a href="../" class="nav-link">
+                <span class="fa fa-home fa-lg"></span> Home</a>
             </li>
+          </li>
+          <li class="nav-item ">
+            <a href="./aboutus.html" class="nav-link"
+              ><span class="fa fa-info fa-lg"></span> About</a
+            >
             <li class="nav-item">
-              <a class="nav-link" href="./aboutus.html"
-                ><span class="fa fa-info fa-lg"></span> About</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"
+              <a href="../#menu" class="nav-link"
                 ><span class="fa fa-list fa-lg"></span> Menu</a
               >
+           
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#"
+              <a href="contactus.html" class="nav-link"
                 ><span class="fa fa-address-card fa-lg"></span> Contact</a
               >
             </li>
           </ul>
+          <span class="navbar-text">
+            <a id="login-modal-toggler">
+              <span class="fa fa-sign-in"></span> Login
+            </a>
+          </span>
         </div>
       </div>
     </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="login-modal" role="dialog" aria-labelledby="login-modal-form" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-row">
+                <div class="form-group col-sm-4">
+                  <!-- <label  for="email-input"> Enter Email </label> -->
+                  <input type="email" class="form-control" placeholder="Enter email">
+                </div>
+                <div class="form-group col-sm-4">
+                  <!-- <label for="password-input">Password</label> -->
+                  <input type="password" class="form-control" placeholder="password">
+                </div>
+                <div class="col-sm-auto align-self-center">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="save-password">
+                    <label class="form-check-label" for="input-check">Remember Password</label>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="modal-footer"> -->
+                <div class="form-row">
+                  <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                </div>
+              <!-- </div> -->
+              
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
     <header class="jumbotron">
       <div class="container">
@@ -101,7 +173,7 @@
         </div>
         <div class="col-12 col-sm-4 offset-sm-1">
           <h5>Our Address</h5>
-          <address style="font-size: 100%;">
+          <address style="font-size: 100%">
             121, Clear Water Bay Road<br />
             Clear Water Bay, Kowloon<br />
             HONG KONG<br />
@@ -117,7 +189,7 @@
             <div
               class="progress-bar progress-bar-striped bg-danger"
               role="progressbar"
-              style="width: 80%;"
+              style="width: 80%"
             >
               Loading... 80%
             </div>
@@ -325,5 +397,16 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  </body>
+    <!-- belwo scripts for working without internet -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    //login modal toggler
+    // instead of using data-toggle="modal" data-target="#login-modal" as html attribute
+    $("#login-modal-toggler").click(function(){
+          $("#login-modal").modal("toggle");
+        });
+</script> 
+</body>
 </html>
